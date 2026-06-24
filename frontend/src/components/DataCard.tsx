@@ -64,7 +64,7 @@ export function DataCard({
         <div>
           <h3 className="text-base font-medium text-[#111111] mb-1">{title}</h3>
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-serif tracking-tight text-[#111111] leading-none">
+            <span className="text-2xl font-serif tracking-tight text-[#4F39F6] leading-none">
               {displayVal}
               <span className="text-sm text-[#787774] font-sans ml-1.5">
                 {unit}

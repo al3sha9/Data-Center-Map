@@ -91,7 +91,7 @@ function BarChart({ records }: { records: EnergyRecord[] }) {
               y={by}
               width={barW}
               height={bh}
-              fill={isBaseline ? "#111111" : "#EAEAEA"}
+              fill={isBaseline ? "#4F39F6" : "#EAEAEA"}
               rx={3}
             />
             {/* value label */}
@@ -266,7 +266,7 @@ export function HomePage() {
                     <p className="text-[10px] uppercase tracking-[0.08em] text-[#787774] mb-1 font-mono">
                       Global 2024 Baseline
                     </p>
-                    <p className="text-3xl font-serif tracking-tight text-[#111111] leading-none">
+                    <p className="text-3xl font-serif tracking-tight text-[#4F39F6] leading-none">
                       {baseline.value.toLocaleString()}{" "}
                       <span className="text-sm font-sans text-[#787774]">
                         TWh
@@ -279,7 +279,7 @@ export function HomePage() {
                     <p className="text-[10px] uppercase tracking-[0.08em] text-[#787774] mb-1 font-mono">
                       2030 Projections
                     </p>
-                    <p className="text-2xl font-serif tracking-tight text-[#111111] leading-none">
+                    <p className="text-2xl font-serif tracking-tight text-[#4F39F6] leading-none">
                       {minProjection?.value.toLocaleString()} -{" "}
                       {maxProjection.value.toLocaleString()}{" "}
                       <span className="text-sm font-sans text-[#787774]">
@@ -321,7 +321,7 @@ export function HomePage() {
               </div>
               <div className="flex items-center gap-4 text-xs text-[#787774] font-mono">
                 <span className="flex items-center gap-1.5">
-                  <span className="w-3 h-3 bg-[#111111] rounded-sm inline-block" />
+                  <span className="w-3 h-3 bg-[#4F39F6] rounded-sm inline-block" />
                   2024
                 </span>
                 <span className="flex items-center gap-1.5">
@@ -371,7 +371,7 @@ export function HomePage() {
 
               const header = (
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-                  <div className="font-medium text-[#111111] text-base">
+                  <div className="font-medium text-[#4F39F6] text-base">
                     {g.name}
                   </div>
                   <div className="text-sm">
@@ -483,7 +483,7 @@ export function HomePage() {
               );
               const header = (
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-                  <div className="font-medium text-[#111111] text-base">
+                  <div className="font-medium text-[#4F39F6] text-base">
                     {r.institution}
                   </div>
                   <div className="text-sm text-[#787774]">
@@ -578,7 +578,7 @@ export function HomePage() {
 
               const header = (
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-                  <div className="font-medium text-[#111111] text-base">
+                  <div className="font-medium text-[#4F39F6] text-base">
                     {r.institution}
                   </div>
                   <div className="text-sm text-[#787774]">

@@ -102,7 +102,7 @@ export function EnergyMap({ groups }: { groups: RegionalGroup[] }) {
           onClick={() => setShow2030(false)}
           className={`px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 ease-out ${
             !show2030 
-              ? "bg-[#111111] text-white shadow-md" 
+              ? "bg-[#4F39F6] text-white shadow-md" 
               : "text-[#787774] hover:text-[#111111] hover:bg-gray-100/50"
           }`}
         >
@@ -112,7 +112,7 @@ export function EnergyMap({ groups }: { groups: RegionalGroup[] }) {
           onClick={() => setShow2030(true)}
           className={`px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 ease-out ${
             show2030 
-              ? "bg-[#111111] text-white shadow-md" 
+              ? "bg-[#4F39F6] text-white shadow-md" 
               : "text-[#787774] hover:text-[#111111] hover:bg-gray-100/50"
           }`}
         >
