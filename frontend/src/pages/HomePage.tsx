@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Header } from "../components/Header";
 import { useEnergyData } from "../hooks/useEnergyData";
 import type { EnergyRecord } from "../types/data";
@@ -32,9 +32,19 @@ function scenarioLabel(s: string) {
 /* ─── SVG bar chart ─────────────────────────────────────── */
 
 function BarChart({ records }: { records: EnergyRecord[] }) {
-  const W = 640;
-  const H = 220;
-  const PAD = { top: 16, right: 16, bottom: 40, left: 56 };
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const W = isMobile ? 500 : 640;
+  const H = isMobile ? 280 : 220;
+  const PAD = isMobile 
+    ? { top: 24, right: 16, bottom: 56, left: 64 }
+    : { top: 16, right: 16, bottom: 40, left: 56 };
   const innerW = W - PAD.left - PAD.right;
   const innerH = H - PAD.top - PAD.bottom;
 
@@ -65,10 +75,10 @@ function BarChart({ records }: { records: EnergyRecord[] }) {
             strokeWidth={1}
           />
           <text
-            x={PAD.left - 8}
+            x={PAD.left - (isMobile ? 10 : 8)}
             y={y(t) + 4}
             textAnchor="end"
-            fontSize={10}
+            fontSize={isMobile ? 12 : 10}
             fill="#787774"
             fontFamily="'JetBrains Mono', 'SF Mono', monospace"
           >
@@ -97,9 +107,9 @@ function BarChart({ records }: { records: EnergyRecord[] }) {
             {/* value label */}
             <text
               x={x + barW / 2}
-              y={by - 6}
+              y={by - (isMobile ? 8 : 6)}
               textAnchor="middle"
-              fontSize={10}
+              fontSize={isMobile ? 14 : 10}
               fill="#111111"
               fontFamily="'JetBrains Mono', 'SF Mono', monospace"
               fontWeight={isBaseline ? "600" : "400"}
@@ -109,24 +119,35 @@ function BarChart({ records }: { records: EnergyRecord[] }) {
             {/* x-axis label */}
             <text
               x={x + barW / 2}
-              y={H - PAD.bottom + 14}
+              y={H - PAD.bottom + (isMobile ? 18 : 14)}
               textAnchor="middle"
-              fontSize={9}
+              fontSize={isMobile ? 12 : 9}
               fill="#787774"
               fontFamily="'Helvetica Neue', sans-serif"
             >
               {r.year}
             </text>
-            <text
-              x={x + barW / 2}
-              y={H - PAD.bottom + 26}
-              textAnchor="middle"
-              fontSize={9}
-              fill="#787774"
-              fontFamily="'Helvetica Neue', sans-serif"
+            <foreignObject
+              x={x + barW / 2 - 50}
+              y={H - PAD.bottom + (isMobile ? 22 : 18)}
+              width={100}
+              height={40}
             >
-              {scenarioLabel(r.scenario)}
-            </text>
+              <div
+                xmlns="http://www.w3.org/1999/xhtml"
+                style={{
+                  width: '100%',
+                  textAlign: 'center',
+                  fontSize: isMobile ? '11px' : '9px',
+                  color: '#787774',
+                  fontFamily: "'Helvetica Neue', sans-serif",
+                  lineHeight: '1.2',
+                  wordWrap: 'break-word'
+                }}
+              >
+                {scenarioLabel(r.scenario)}
+              </div>
+            </foreignObject>
           </g>
         );
       })}
@@ -330,7 +351,11 @@ export function HomePage() {
                 </span>
               </div>
             </div>
-            <BarChart records={records} />
+            <div className="overflow-x-auto -mx-8 px-8 md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+              <div className="min-w-[500px] pb-2 md:pb-0">
+                <BarChart records={records} />
+              </div>
+            </div>
             <p className="text-xs text-[#787774] mt-6 text-center">
               These are not exact predictions. They show different possible futures depending on AI growth, efficiency, and grid constraints.
             </p>
