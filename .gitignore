@@ -15,6 +15,10 @@ __pycache__/
 venv/
 env/
 ENV/
+.agents/
+skills-lock.json
+client-deliverable
+data-center-dataset.zip
 
 # Distribution / packaging
 *.egg-info/
