@@ -1,0 +1,101 @@
+[
+  {
+    "id": "2604_06198v1",
+    "name": "Concentrated siting of AI data centers drives regional",
+    "publisher": null,
+    "type": "report",
+    "year": null,
+    "url": null,
+    "filename": "2604.06198v1.pdf",
+    "credibility": "medium",
+    "notes": "Indexed local PDF source."
+  },
+  {
+    "id": "energyandai",
+    "name": "Energy and AI",
+    "publisher": "International Energy Agency",
+    "type": "report",
+    "year": null,
+    "url": null,
+    "filename": "EnergyandAI.pdf",
+    "credibility": "high",
+    "notes": "Indexed local PDF source."
+  },
+  {
+    "id": "global_electricity_review_2026",
+    "name": "Global Electricity",
+    "publisher": null,
+    "type": "report",
+    "year": null,
+    "url": null,
+    "filename": "Global-Electricity-Review-2026.pdf",
+    "credibility": "medium",
+    "notes": "Indexed local PDF source."
+  },
+  {
+    "id": "globalenergyreview2025",
+    "name": "Global Energy",
+    "publisher": null,
+    "type": "report",
+    "year": null,
+    "url": null,
+    "filename": "GlobalEnergyReview2025.pdf",
+    "credibility": "medium",
+    "notes": "Indexed local PDF source."
+  },
+  {
+    "id": "tem_4_report_draft_v0_15_final",
+    "name": "Total Energy Model 4.0 -",
+    "publisher": null,
+    "type": "report",
+    "year": null,
+    "url": null,
+    "filename": "TEM-4-Report-Draft-v0-15-FINAL.pdf",
+    "credibility": "medium",
+    "notes": "Indexed local PDF source."
+  },
+  {
+    "id": "the_potential_for_geothermal_energy_to_meet_growing_data_center_electricity_dema",
+    "name": "Energy & Climate",
+    "publisher": null,
+    "type": "report",
+    "year": null,
+    "url": null,
+    "filename": "The-Potential-for-Geothermal-Energy-to-Meet-Growing-Data-Center-Electricity-Demand.pdf",
+    "credibility": "medium",
+    "notes": "Indexed local PDF source."
+  },
+  {
+    "id": "worldenergyoutlook2025",
+    "name": "World Energy",
+    "publisher": null,
+    "type": "report",
+    "year": null,
+    "url": null,
+    "filename": "WorldEnergyOutlook2025.pdf",
+    "credibility": "medium",
+    "notes": "Indexed local PDF source."
+  },
+  {
+    "id": "redacted_report",
+    "name": "Note: The following is a redacted version of the original report published October 13, 2025 [20 pgs].",
+    "publisher": null,
+    "type": "report",
+    "year": null,
+    "url": null,
+    "filename": "redacted_report.pdf",
+    "credibility": "medium",
+    "notes": "Indexed local PDF source."
+  },
+  {
+    "id": "scaling_bigger_faster_cheaper_data_centers_with_smarter_designs_final",
+    "name": "Private Capital Practice",
+    "publisher": null,
+    "type": "report",
+    "year": null,
+    "url": null,
+    "filename": "scaling-bigger-faster-cheaper-data-centers-with-smarter-designs-final.pdf",
+    "credibility": "medium",
+    "notes": "Indexed local PDF source."
+  }
+]

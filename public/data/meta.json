@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-06-24",
+  "total_records": 5,
+  "source_count": 9,
+  "metrics": [
+    "data_center_electricity_demand_twh"
+  ],
+  "coverage": {
+    "years": [
+      2024,
+      2030
+    ],
+    "regions": [
+      "global"
+    ],
+    "countries": []
+  },
+  "disclaimer": "This dataset is compiled from public research reports and should be treated as scenario-based educational data, not real-time operational measurement."
+}
